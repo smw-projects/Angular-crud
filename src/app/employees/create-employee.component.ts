@@ -12,6 +12,7 @@ import { Department } from '../model/department.model';
 })
 export class CreateEmployeeComponent implements OnInit {
   datePickerConfig: Partial<BsDatepickerConfig>;
+  previewPhoto = false;
   // dateOfBirth: Date = new Date(2018, 0, 30);
   gender = 'male';
   isActive = true;
@@ -39,5 +40,7 @@ export class CreateEmployeeComponent implements OnInit {
   saveEmployee(item:NgForm){
     console.log(item);
   }
-
+  togglePhotoPreview() {
+    this.previewPhoto = !this.previewPhoto;
+  }
 }
